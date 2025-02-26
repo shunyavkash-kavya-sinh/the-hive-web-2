@@ -40,7 +40,7 @@
     position: fixed;
     width: 100%;
     z-index: 9;
-    background:transparent;
+    background: transparent;
   }
 
   .menu.active {
@@ -96,10 +96,12 @@
     display: block;
   }
 
-  .header-change{
-    background: var(--sk);
+  .header-change {
+    background: var(--skin);
   }
+
   /* header end */
+
   .banner-img {
     position: static;
   }
@@ -138,12 +140,64 @@
     padding-top: 0px 53px;
     height: 50%;
   }
+
+  /* banner end */
+
+  .three-columbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* three-grid box end */
+
+  .processthree-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 50px;
+  }
+
+  /* process end */
 }
 
 @media (max-width: 768px) {
   h1 {
     font-family: 45px;
   }
+
+  .btn-support {
+    display: none;
+  }
+
+  .columbox-content {
+    position: absolute;
+    padding-left: 30px;
+    display: flex;
+    padding-bottom: 20px;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: end;
+    transition: all 500ms ease-in-out;
+  }
+
+  .columbox-title {
+    font-size: 30px;
+  }
+
+  .left-colum-arow svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* three-grid box end */
+
+  .processthree-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px 50px;
+  }
+
+  /* process end */
 }
 
 @media (max-width: 640px) {
@@ -151,7 +205,43 @@
     font-size: 40px;
   }
 
+  h2{
+    font-size: 40px;
+  }
+
   .banner-btn {
     flex-direction: column;
   }
+
+  /* banner and  */
+
+  .three-columbox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 9px 0px;
+  }
+
+  .all-columbox {
+    background: var(--skin);
+    padding-top: 300px;
+  }
+
+  .columbox {
+    width: calc(100% + 32px);
+    margin: 0px -16px;
+  }
+
+  /* three-grid box end */
+
+  .main-content {
+    font-size: 33px;
+    font-weight: 100;
+  }
+
+  .process-box-all {
+    background-color: var(--primary);
+    padding: 50px 0px;
+  }
+  
+  /* process-box */
 }
