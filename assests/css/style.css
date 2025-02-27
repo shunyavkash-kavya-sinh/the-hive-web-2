@@ -20,7 +20,7 @@ body {
   font-family: var(--libre-franklin);
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
 }
 
