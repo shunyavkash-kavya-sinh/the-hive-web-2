@@ -21,7 +21,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .container {
@@ -323,7 +323,8 @@ header {
   height: 100%;
 }
 
-.banner-content ,.banner-whoweare-content{
+.banner-content,
+.banner-whoweare-content {
   z-index: 2;
   position: relative;
   display: flex;
@@ -834,13 +835,13 @@ form input[type="email"] {
   max-width: 444px;
   height: 53px;
   clip-path: polygon(6% 0, 100% 0%, 96% 100%, 0% 100%);
-  font-size:16px;
+  font-size: 16px;
   color: var(--black);
 }
 
 .play-icone {
   position: absolute;
-  right:0;
+  right: 0;
   top: 0;
   width: 100%;
   max-width: 80px;
@@ -853,3 +854,93 @@ form input[type="email"] {
   background-color: var(--secondary);
 }
 /* footer end */
+
+/* Who We Are page start */
+
+/* twocolum-information start */
+.twocolum-information {
+  padding: 100px 0px;
+  background: var(--skin);
+}
+
+.information-gridbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 40px;
+}
+
+.information-box-title {
+  max-width: 555px;
+  overflow-y: auto;
+  margin-bottom: 14px;
+}
+
+.information-title {
+  color: var(--primary);
+  line-height: 1.3;
+  font-weight: 400;
+  width: 100%;
+}
+
+.information-paragraph {
+  line-height: 1.6;
+  color: var(--primary);
+  font-weight: 300;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.information-box-paragraph {
+  max-width: 516px;
+  overflow-y: auto;
+}
+
+.information-gridbox::-webkit-scrollbar {
+  display: none;
+}
+/* twocolum-information end */
+
+/* circle-data star */
+.circle-data {
+  padding: 50px 0px;
+  background-color: var(--skin);
+}
+
+.circle-allbox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0px 100px;
+
+}
+
+.criclebox-img {
+  width: 261px;
+  height: 261px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.criclebox-img img{
+  width: 150px;
+  height: 150px;
+}
+
+.green {
+  color: var(--primary);
+}
+
+.circle-autoplay{
+  width: 100%;
+  max-width:1350px;
+}
+
+.circle-data .slick-list{
+  overflow: visible;
+}
+/* circle-data end */
+
+/* Who We Are page end */
