@@ -600,7 +600,11 @@ header {
 .resources-slid {
   background-color: var(--skin);
   padding: 100px 0px;
-  position: relative;
+  overflow: hidden;
+}
+
+.resources-slid .slick-list {
+  overflow: visible;
 }
 
 .resources-columbox {
@@ -904,13 +908,13 @@ form input[type="email"] {
 .circle-data {
   padding: 50px 0px;
   background-color: var(--skin);
+  overflow: hidden;
 }
 
 .circle-allbox {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0px 100px;
-
 }
 
 .criclebox-img {
@@ -924,7 +928,7 @@ form input[type="email"] {
   aspect-ratio: 1/1;
 }
 
-.criclebox-img img{
+.criclebox-img img {
   width: 150px;
   height: 150px;
 }
@@ -933,14 +937,78 @@ form input[type="email"] {
   color: var(--primary);
 }
 
-.circle-autoplay{
+.circle-autoplay {
   width: 100%;
-  max-width:1350px;
+  max-width: 1350px;
 }
 
-.circle-data .slick-list{
+.circle-data .slick-list {
   overflow: visible;
 }
 /* circle-data end */
+
+/* purpose start */
+.purpose {
+  position: relative;
+  background-color: var(--secondary);
+}
+
+.purpose-box {
+  background-image: url(../images/vetors/purpose-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1045px;
+  height: 328px;
+  position: static;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.purpose-box-two {
+  position: absolute;
+  background-image: url(../images/section/purpose-bg-img.png);
+  background-color: var(--secondary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1092px;
+  height: 328px;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.purpose-paragraph {
+  max-width: 500px;
+  height: 53px;
+  overflow: scroll;
+  color: var(--white);
+  font-weight: 100;
+  margin-bottom: 22px;
+  line-height: 1.9;
+}
+
+.purpose-paragraph::-webkit-scrollbar{
+  display: none;
+}
+
+.purpose-sub-title{
+  color: var(--white);
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+
+/* purpose end */
+
+/* three-grid box start */
+.all-columbox-to{
+  background-color: var(--skin);
+  padding:100px 0px;
+}
+
+/* three-grid box end */
 
 /* Who We Are page end */
