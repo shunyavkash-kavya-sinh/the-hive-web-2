@@ -296,8 +296,8 @@
   .secondimgbox-title {
     max-width: 100%;
   }
-  
-  .secondimgbox-paragraph{
+
+  .secondimgbox-paragraph {
     max-width: 100%;
   }
 
@@ -308,6 +308,11 @@
   .left-arow-img {
     margin-bottom: 40px;
   }
+
+  .secondbox-img {
+    width: 100%;
+  }
+
   /* tow-colum-page end */
 
   /* what-we-do end */
