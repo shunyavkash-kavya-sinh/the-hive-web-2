@@ -950,34 +950,27 @@ form input[type="email"] {
 /* purpose start */
 .purpose {
   position: relative;
+  background-image: url(../images/section/purpose-bg-img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-color: var(--skin);
+}
+
+.purpose::before {
+  content: "";
+  position: absolute;
   background-color: var(--secondary);
+  clip-path: polygon(0 -1%, 73% -1%, 100% 100%, 0 100%);
+  width: 70%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .purpose-box {
-  background-image: url(../images/vetors/purpose-bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1045px;
-  height: 328px;
-  position: static;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.purpose-box-two {
-  position: absolute;
-  background-image: url(../images/section/purpose-bg-img.png);
-  background-color: var(--secondary);
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 1092px;
-  height: 328px;
-  width: 100%;
-  right: 0;
-  top: 0;
-  z-index: 1;
+  position: relative;
+  padding-block: 90px;
 }
 
 .purpose-paragraph {
@@ -990,25 +983,151 @@ form input[type="email"] {
   line-height: 1.9;
 }
 
-.purpose-paragraph::-webkit-scrollbar{
+.purpose-paragraph::-webkit-scrollbar {
   display: none;
 }
 
-.purpose-sub-title{
+.purpose-sub-title {
   color: var(--white);
   font-weight: 200;
   padding-bottom: 10px;
 }
 
-
 /* purpose end */
 
 /* three-grid box start */
-.all-columbox-to{
+.all-columbox-to {
   background-color: var(--skin);
-  padding:100px 0px;
+  padding: 100px 0px;
 }
 
 /* three-grid box end */
+
+/* tow-colum-page start  */
+
+.tow-colum-page {
+  padding: 200px 0px;
+  background-color: var(--primary);
+}
+
+.show-colum-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 110px;
+}
+
+.show-content {
+  grid-column: 2/4;
+}
+
+.show-title{
+  overflow: auto;
+}
+
+.first-colum-showbox {
+  width: 251px;
+  background-color: var(--secondary);
+  padding: 50px 0px;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.click-menu {
+  padding-bottom: 40px;
+}
+
+.click-menu li a {
+  display: inline-block;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 200;
+  padding-bottom: 10px;
+  transition: all 100ms ease-in-out;
+}
+
+.click-menu li a:focus {
+  border-left: 2px solid var(--black);
+  padding-left:10px;
+}
+
+.secondbox-title{
+  color: var(--white);
+  padding-bottom: 14px;
+}
+
+.secondbox-paragraph{
+  color: white;
+  font-weight: 100;
+  line-height: 1.8;
+  max-width: 713  px;
+  height: 141px;
+  overflow-x: hidden;
+  margin-bottom: 54px;
+}
+
+.secondbox-paragraph::-webkit-scrollbar{
+  display: none;
+}
+
+.secondbox-img{
+  padding-bottom: 60px;
+}
+
+.secondbox-subtitle{
+  font-size: 12px;
+  color: white;
+  font-weight: 100;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.second-buttonbox{
+  padding-bottom: 86px;
+}
+
+.left-arow-img{
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+}
+
+.secondimgbox-subtitle{
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  padding-bottom: 12px;
+}
+
+.secondimgbox-title{
+  max-width: 200px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  padding-bottom: 14px;
+}
+
+.secondimgbox-paragraph{
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 100;
+  max-width: 228px;
+  padding-bottom: 12px;
+}
+
+.second-img-content{
+  margin-left: 40px;
+}
+
+.communication{
+  border: 2px solid rgba(255, 255, 255, 0.178);
+  border-right: 0;
+  border-left: 0;
+  padding-top: 80px;
+  margin-bottom: 80px;
+}
+/* tow-colum-page end */
 
 /* Who We Are page end */
