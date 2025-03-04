@@ -15,6 +15,10 @@
   /* outline: auto; */
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-size: 16px;
   font-family: var(--libre-franklin);
@@ -22,6 +26,14 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
 }
 
 .container {
@@ -311,6 +323,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 0;
 }
 
 .banner .container {
@@ -976,7 +989,8 @@ form input[type="email"] {
 .purpose-paragraph {
   max-width: 500px;
   height: 53px;
-  overflow: scroll;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: var(--white);
   font-weight: 100;
   margin-bottom: 22px;
@@ -1020,7 +1034,7 @@ form input[type="email"] {
   grid-column: 2/4;
 }
 
-.show-title{
+.show-title {
   overflow: auto;
 }
 
@@ -1047,33 +1061,33 @@ form input[type="email"] {
 
 .click-menu li a:focus {
   border-left: 2px solid var(--black);
-  padding-left:10px;
+  padding-left: 10px;
 }
 
-.secondbox-title{
+.secondbox-title {
   color: var(--white);
   padding-bottom: 14px;
 }
 
-.secondbox-paragraph{
+.secondbox-paragraph {
   color: white;
   font-weight: 100;
   line-height: 1.8;
-  max-width: 713  px;
+  max-width: 713 px;
   height: 141px;
   overflow-x: hidden;
   margin-bottom: 54px;
 }
 
-.secondbox-paragraph::-webkit-scrollbar{
+.secondbox-paragraph::-webkit-scrollbar {
   display: none;
 }
 
-.secondbox-img{
+.secondbox-img {
   padding-bottom: 60px;
 }
 
-.secondbox-subtitle{
+.secondbox-subtitle {
   font-size: 12px;
   color: white;
   font-weight: 100;
@@ -1081,17 +1095,17 @@ form input[type="email"] {
   letter-spacing: 2px;
 }
 
-.second-buttonbox{
+.second-buttonbox {
   padding-bottom: 86px;
 }
 
-.left-arow-img{
+.left-arow-img {
   width: 43px;
   height: 43px;
   display: inline-block;
 }
 
-.secondimgbox-subtitle{
+.secondimgbox-subtitle {
   text-transform: uppercase;
   color: var(--secondary);
   font-size: 12px;
@@ -1100,7 +1114,7 @@ form input[type="email"] {
   padding-bottom: 12px;
 }
 
-.secondimgbox-title{
+.secondimgbox-title {
   max-width: 200px;
   font-size: 22px;
   font-weight: 400;
@@ -1108,7 +1122,7 @@ form input[type="email"] {
   padding-bottom: 14px;
 }
 
-.secondimgbox-paragraph{
+.secondimgbox-paragraph {
   color: var(--white);
   font-size: 13px;
   line-height: 1.7;
@@ -1117,11 +1131,11 @@ form input[type="email"] {
   padding-bottom: 12px;
 }
 
-.second-img-content{
+.second-img-content {
   margin-left: 40px;
 }
 
-.communication{
+.communication {
   border: 2px solid rgba(255, 255, 255, 0.178);
   border-right: 0;
   border-left: 0;
@@ -1129,9 +1143,197 @@ form input[type="email"] {
   margin-bottom: 80px;
 }
 
-.secondbox-img img{
+.secondbox-img img {
   object-fit: cover;
 }
 /* tow-colum-page end */
 
 /* Who We Are page end */
+
+/* our purpose start */
+
+/* our purpose tow colum start */
+.tow-colum-ourbox {
+  padding: 50px 0px;
+  background-color: var(--primary);
+}
+
+.our-allbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.our-title {
+  color: var(--white);
+  font-weight: 200;
+  max-width: 536px;
+}
+
+.our-paragraph {
+  color: var(--white);
+  font-weight: 100;
+  line-height: 1.6;
+  max-width: 516px;
+  height: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* our purpose tow colum end */
+
+/* our purpose tow colum img-content start */
+.purpose-imgcontent {
+  padding: 100px 0px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 100;
+}
+
+.purpose-imgcontent-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 90px 100px;
+  align-items: center;
+}
+
+.ourcontent-subtitle {
+  color: var(--secondary);
+  font-size: 12px;
+  padding-bottom: 16px;
+}
+
+.ourcontent-title {
+  font-size: 26px;
+  padding-bottom: 16px;
+  font-weight: 300;
+}
+
+.ourcontent-paragraph {
+  line-height: 1.6;
+  max-width: 493px;
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}
+
+.ourimg-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 567px;
+}
+
+/* our purpose tow colum img-content end */
+
+/* our-purpose start */
+.our-purpose {
+  position: relative;
+  background-image: url(../images/section/our-purpose-bghaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-color: var(--skin);
+}
+
+.our-purpose::before {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary);
+  clip-path: polygon(0 -1%, 80% -1%, 100% 100%, 0 100%);
+  width: 70%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/* our-purpose end */
+
+/* our purpose end */
+.banner-clip {
+  padding: 180px 0px;
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  font-weight: 100;
+}
+
+.resourcesbanner-img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.resourcesbanner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resourcesbanner-title {
+  max-width: 400px;
+  font-weight: 100;
+  padding-bottom: 18px;
+}
+
+.resourcesbanner-paragraph {
+  max-width: 460px;
+  height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.resourcesbanner-img img:nth-child(2) {
+  display: none;
+}
+
+/* resources page start */
+
+/* filterbox start */
+
+.resources-filterbox {
+  padding: 100px 0px;
+  background-color: var(--skin);
+}
+
+.filter-gridbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:70px 22px;
+}
+
+.filter-btn li:not(:first-child) {
+  padding: 10px 22px;
+  background-color: var(--secondary);
+  margin-left: 16px;
+  color: var(--white);
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.filter-btn li:not(:first-child):hover  {
+  opacity: 50%;
+}
+
+.filter-btn li:first-child{
+  color: var(--primary);
+  font-size: 12px;
+  white-space:nowrap;
+
+}
+
+.filter-btn li a{
+  color: var(--white);
+  font-size: 12px;
+  white-space:nowrap;
+}
+  
+
+
+
+/* filterbox end */
+
+/* resources page end */
