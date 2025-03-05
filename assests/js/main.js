@@ -57,40 +57,39 @@ $(".slider-mainbox").slick({
   ],
 });
 
-
 // resources start
-  $(".resources-slider-box").slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false,
-        },
+$(".resources-slider-box").slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: false,
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  });
+    },
+  ],
+});
 
 // resources end
 
@@ -99,7 +98,25 @@ $(".circle-autoplay").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
-  arrows:false,
+  arrows: false,
   autoplaySpeed: 1000,
 });
 // circle-data end
+
+// filter button app
+
+$(document).ready(function () {
+  var $filterButtons = $(".filter-btn li");
+  var $resources = $(".filter-resources");
+  $filterButtons.click(function () {
+    $filterButtons.removeClass("is-active");
+    $(this).addClass("is-active");
+    var filterClass = $(this).attr("class").split(" ")[0];
+    if (filterClass === "all") {
+      $resources.fadeIn();
+    } else {
+      $resources.hide();
+      $("." + filterClass + "-box").fadeIn();
+    }
+  });
+});

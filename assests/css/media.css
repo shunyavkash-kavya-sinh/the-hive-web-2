@@ -251,6 +251,7 @@
   }
 
   .show-title {
+    overflow: auto;
     background-color: var(--secondary);
     width: calc(100% + 32px);
     margin: 0px -16px;
@@ -441,8 +442,6 @@
   .filter-gridbox {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    overflow: hidden;
   }
 
   .tab-btn {
@@ -450,6 +449,30 @@
     width: 100%;
   }
   /* filterbox end */
+
+  /* latest and updates start  */
+  .mail-box {
+    flex-direction: column;
+  }
+
+  .mailtext-box {
+    margin-top: 35px;
+    width: 70%;
+  }
+
+  .mail-title {
+    margin: 0;
+  }
+
+  .mail-contentbox {
+    padding-top: 100px;
+    padding-bottom: 116px;
+  }
+  
+  .slider-demobox{
+    display: none;
+  }
+  /* latest and updates end*/
 }
 
 @media (max-width: 768px) {
@@ -642,4 +665,15 @@
     margin-bottom: 21px;
   }
   /* footer end */
+
+  .filter-gridbox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .mailtext-box {
+    margin-top: 35px;
+    width: 100%;
+  }
 }

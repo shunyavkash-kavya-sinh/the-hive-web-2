@@ -8,6 +8,10 @@
   --libre-franklin: "Libre Franklin", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -614,6 +618,7 @@ header {
   background-color: var(--skin);
   padding: 100px 0px;
   overflow: hidden;
+  position: relative;
 }
 
 .resources-slid .slick-list {
@@ -624,6 +629,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0px 22px;
+  cursor:move;
 }
 
 .resources-img {
@@ -674,6 +680,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  
 }
 
 .resources {
@@ -703,7 +710,8 @@ header {
   background-size: cover;
   position: absolute;
   top: -15%;
-  right: 20%;
+  right: 0;
+  margin-right: 60px;
   z-index: 1;
 }
 
@@ -713,8 +721,18 @@ header {
   background-size: cover;
   position: absolute;
   top: -15%;
-  right: 15%;
+  right: 0;
   z-index: 1;
+}
+
+.slider-demobox{
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--skin);
+  left: 0;
+  bottom: 0;
 }
 /* resources end */
 
@@ -759,6 +777,18 @@ footer {
   color: var(--black);
   font-size: 13px;
   padding-top: 14px;
+}
+
+.footer-img {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 1/1;
+}
+
+.footer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .footer-box {
@@ -849,7 +879,7 @@ form input[type="email"] {
   outline: none;
   padding: 16px 29px;
   width: 100%;
-  max-width: 444px;
+  /* max-width: 444px; */
   height: 53px;
   clip-path: polygon(6% 0, 100% 0%, 96% 100%, 0% 100%);
   font-size: 16px;
@@ -1035,7 +1065,7 @@ form input[type="email"] {
 }
 
 .show-title {
-  overflow: auto;
+  position: relative;
 }
 
 .first-colum-showbox {
@@ -1044,6 +1074,8 @@ form input[type="email"] {
   padding: 50px 0px;
   padding-left: 40px;
   padding-right: 10px;
+  position: sticky;
+  top: 200px;
 }
 
 .click-menu {
@@ -1300,7 +1332,7 @@ form input[type="email"] {
 .filter-gridbox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:70px 22px;
+  gap: 70px 22px;
 }
 
 .filter-btn li:not(:first-child) {
@@ -1314,26 +1346,54 @@ form input[type="email"] {
   cursor: pointer;
 }
 
-.filter-btn li:not(:first-child):hover  {
+.filter-btn li:not(:first-child):hover {
   opacity: 50%;
 }
 
-.filter-btn li:first-child{
+.filter-btn li:first-child {
   color: var(--primary);
   font-size: 12px;
-  white-space:nowrap;
-
+  white-space: nowrap;
 }
 
-.filter-btn li a{
+.filter-btn li a {
   color: var(--white);
   font-size: 12px;
-  white-space:nowrap;
+  white-space: nowrap;
 }
-  
 
+.filter-resources {
+  width: 100%;
+}
 
+.filter-resources-img {
+  width: 100%;
+  height: 100%;
+  max-height: 254px;
+  aspect-ratio: 1/1;
+  margin-bottom: 23px;
+}
 
+.filter-resources-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* filterbox end */
+
+/* latest and updates start  */
+.mail-contentbox {
+  background-color: var(--primary);
+  padding: 37px 0px;
+}
+
+.mail-title {
+  font-size: 28px;
+  color: var(--white);
+  font-weight: 300;
+  margin-right: 39px;
+  text-align: center;
+}
+/* latest and updates end */
 
 /* resources page end */
