@@ -113,6 +113,7 @@ body {
 
 a {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 span {
@@ -265,15 +266,10 @@ h6 {
   padding: 5px 0px;
 }
 
-.menu ul li a:hover {
-  color: rgba(245, 245, 245, 0.757);
-}
-
 header {
   position: fixed;
   width: 100%;
-  z-index: 9;
-  background: rgb(25, 3, 29);
+  z-index: 10;
   background: linear-gradient(
     180deg,
     rgba(25, 3, 29, 0.258140756302521) 62%,
@@ -629,7 +625,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0px 22px;
-  cursor:move;
+  cursor: move;
 }
 
 .resources-img {
@@ -680,7 +676,6 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  
 }
 
 .resources {
@@ -725,7 +720,7 @@ header {
   z-index: 1;
 }
 
-.slider-demobox{
+.slider-demobox {
   width: 130px;
   height: 100%;
   position: absolute;
@@ -1397,3 +1392,219 @@ form input[type="email"] {
 /* latest and updates end */
 
 /* resources page end */
+
+/* res-open-heasder start */
+
+.res-open-heasder ul li a {
+  color: var(--primary);
+}
+
+/* preach-box start */
+.res-open-heasder {
+  background: var(--skin);
+}
+
+.res-header-change {
+  background-color: var(--skin);
+}
+
+.preach-box {
+  padding: 200px 0px;
+  background-color: var(--skin);
+}
+
+.preach-girdbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+
+.video-box-grid {
+  grid-column: 2/5;
+}
+
+.res-shareicons a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.res-shareicons a:hover {
+  background-color: var(--primary);
+}
+
+.res-shareicons a img {
+  width: 20px;
+  height: 20px;
+}
+
+.res-subtitle {
+  color: var(--black);
+  opacity: 40%;
+  font-size: 14px;
+  display: inline-block;
+  padding-bottom: 12px;
+  font-weight: 400;
+}
+
+.video-img-box {
+  width: 100%;
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  width: 111px;
+  height: 111px;
+  z-index: 2;
+}
+
+.ping {
+  position: absolute;
+  width: 111px;
+  height: 111px;
+  margin: auto;
+  inset: 0;
+  background-color: var(--white);
+  border-radius: 50%;
+  animation: ping 2s infinite ease-in-out;
+  z-index: 1;
+  opacity: 45%;
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.res-coltow-mintitle {
+  padding-bottom: 17px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  font-weight: 300;
+  display: inline-block;
+}
+
+.res-maintitle {
+  color: var(--primary);
+  font-weight: 300;
+  padding-bottom: 18px;
+}
+
+.res-paragraph,
+.resvideo-paragraph {
+  margin-bottom: 47px;
+  line-height: 1.8;
+  max-width: 824px;
+  height: 107px;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  color: var(--primary);
+}
+
+.resvideo-paragraph {
+  max-width: 824px;
+  height: 250px;
+  margin-bottom: 35px;
+}
+
+.res-secondtitle {
+  font-size: 31px;
+  font-weight: 300;
+  padding-top: 43px;
+  padding-bottom: 23px;
+  color: var(--primary);
+}
+
+.video-share-box {
+  width: 100%;
+  height: 500px;
+}
+
+.rea-title-show h3:nth-child(2) {
+  display: none;
+}
+
+/* preach-box end */
+
+.secondary-bg {
+  background-color: var(--secondary);
+}
+
+.secondary-color {
+  color: var(--white);
+  font-weight: 200;
+}
+
+.res-resources-slid .slick-arrow {
+  color: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: var(--secondary);
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.res-resources-slid .slick-arrow:hover {
+  opacity: 48%;
+}
+
+.resources-slid .slick-prev {
+  background-image: url("../images/vetors/res-left-arow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -15%;
+  right: 0;
+  margin-right: 60px;
+  z-index: 1;
+}
+
+.resources-slid .slick-next {
+  background-image: url("../images/vetors/res-right-arow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -15%;
+  right: 0;
+  z-index: 1;
+}
+/* res-open-heasder end */
+
+/* res purpose start  */
+.res-purpose{
+  position: relative;
+  background-image: url(../images/section/res-clip-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-color: var(--skin);
+}
+
+.res-purpose::before {
+  content: "";
+  position: absolute;
+  background-color: var(--primary);
+  clip-path: polygon(0 0%, 100% 0%, 82% 100%, 0 100%);
+  width: 70%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/* res purpose end    */

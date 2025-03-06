@@ -15,6 +15,17 @@ $(document).ready(function () {
   });
 });
 
+// header scroll dow tow
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 30) {
+      $(".res-open-heasder").addClass("res-header-change");
+    } else {
+      $(".res-open-heasder").removeClass("res-header-change");
+    }
+  });
+});
+
 var header = $("header").innerHeight() + "px";
 console.log("Header Height : ", header);
 
