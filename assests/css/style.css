@@ -688,7 +688,7 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: transparent;
+  border:1px solid transparent;
   background-color: var(--primary);
   cursor: pointer;
   transition: all 500ms ease-in-out;
@@ -1562,10 +1562,10 @@ form input[type="email"] {
 }
 
 .res-resources-slid .slick-arrow:hover {
-  opacity: 48%;
+  opacity: 50%;
 }
 
-.resources-slid .slick-prev {
+.res-resources-slid .slick-prev {
   background-image: url("../images/vetors/res-left-arow.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1576,7 +1576,7 @@ form input[type="email"] {
   z-index: 1;
 }
 
-.resources-slid .slick-next {
+.res-resources-slid .slick-next {
   background-image: url("../images/vetors/res-right-arow.svg");
   background-repeat: no-repeat;
   background-size: cover;
