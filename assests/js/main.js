@@ -131,3 +131,33 @@ $(document).ready(function () {
     }
   });
 });
+
+// filter helping button app
+
+$(document).ready(function () {
+  var $filterButtons = $(".filter-btn li");
+  var $resources = $(".help-img-box");
+
+  $filterButtons.click(function () {
+    $filterButtons.removeClass("is-active");
+    $(this).addClass("is-active");
+    var filterClass = $(this).attr("class").split(" ")[0];
+    if (filterClass === "filter-all") {
+      $resources.fadeIn();
+    } else {
+      $resources.hide();
+      $("." + filterClass).fadeIn();
+    }
+  });
+});
+
+// img-slider
+
+$(".fade").slick({
+  dots: false,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: "linear",
+  autoplay: true,
+});
