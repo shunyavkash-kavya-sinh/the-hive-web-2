@@ -156,8 +156,22 @@ $(document).ready(function () {
 $(".fade").slick({
   dots: false,
   infinite: true,
-  speed: 500,
+  speed: 400,
   fade: true,
   cssEase: "linear",
   autoplay: true,
 });
+
+//modal box
+
+$(".modal-toggle").on("click", function (e) {
+  e.preventDefault();
+  $(".modal").toggleClass("is-visible");
+
+  if ($(".modal").hasClass("is-visible")) {
+    $("body").addClass("noscroll"); // Disable scroll
+  } else {
+    $("body").removeClass("noscroll"); // Enable scroll
+  }
+});
+

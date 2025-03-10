@@ -107,6 +107,10 @@ body {
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: end;
+}
+
 .align-center {
   align-items: center;
 }
@@ -869,7 +873,7 @@ a:hover .contact-icone {
   position: relative;
 }
 
-form input[type="email"] {
+footer .footer-form input[type="email"] {
   border: 0;
   outline: none;
   padding: 16px 29px;
@@ -879,6 +883,7 @@ form input[type="email"] {
   clip-path: polygon(6% 0, 100% 0%, 96% 100%, 0% 100%);
   font-size: 16px;
   color: var(--black);
+  background-color: white;
 }
 
 .play-icone {
@@ -1710,9 +1715,9 @@ p {
   display: inline-block;
   padding: 12px 45px;
   background-color: var(--secondary);
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  bottom: 40%;
+  bottom: 55%;
   left: -4.5%;
   color: var(--white);
   border: 1px solid transparent;
@@ -1792,7 +1797,7 @@ p {
 /* case working end */
 
 /* img silder start */
-.imges-slider-box{
+.imges-slider-box {
   padding-bottom: 100px;
   background-color: var(--skin);
 }
@@ -1846,3 +1851,241 @@ p {
   z-index: 1;
 }
 /* img silder end */
+
+/* out-come start */
+.out-commentbox {
+  padding-bottom: 100px;
+  background-color: var(--skin);
+}
+
+.out-subtitle {
+  display: inline-block;
+  color: var(--secondary);
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+
+.out-maintitle {
+  font-size: 44px;
+  color: var(--primary);
+  max-width: 872px;
+  font-weight: 350;
+  line-height: 1.3;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.out-paragraph {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 500;
+}
+/* out-come end */
+
+/* contact-page start */
+.main-contactbox {
+  padding: 200px 0px;
+  background-color: var(--primary);
+  /* background-image: url(../images/vetors/lost-banner.svg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+}
+
+.contact-gridbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 50px;
+}
+
+.contact-inputdatabox {
+  grid-column: 2/4;
+}
+
+.contact-logo {
+  padding: 7px 0px;
+}
+
+.main-contactbox form input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  height: 46px;
+  outline: none;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.47);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.main-contactbox ::placeholder {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+select {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+select option {
+  color: black;
+}
+
+.main-contactbox .input-box {
+  width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+}
+
+.main-inputbox {
+  gap: 0px 16px;
+}
+
+.main-contactbox textarea {
+  width: 100%;
+  max-width: 800px;
+  max-height: 100px;
+  min-height: 164px;
+}
+
+.contact-inputdatabox form {
+  width: 100%;
+  max-width: 800px;
+}
+
+.yes-btn input[type="radio"] {
+  outline: 0;
+  width: 21px;
+  height: 21px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.yes-btn label {
+  color: var(--white);
+  padding: 0px 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.yes-btn {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.yes-btn-res input[type="checkbox"] {
+  outline: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.inputbtn-box input[type="button"] {
+  cursor: pointer;
+}
+
+.yes-btn-res label {
+  color: var(--white);
+  padding: 0px 10px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.yes-btn-res {
+  margin: 50px 0px;
+}
+
+.inputbtn-box {
+  flex-direction: column;
+  align-items: center;
+}
+
+.yes-btn-res {
+  display: none;
+}
+
+.modal-box {
+  background-color: var(--skin);
+  width: 100%;
+  max-width: 1106px;
+  height: 100%;
+  max-height: 330px;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 14px 16px;
+}
+
+.modal-content {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-title {
+  font-weight: 500;
+  padding-bottom: 16px;
+  color: var(--primary);
+}
+
+.modal-paragraph {
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 30px;
+  color: var(--primary);
+}
+
+.modal-cancle-btn {
+  width: 47px;
+  height: 47px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+  cursor: pointer;
+}
+
+.modal-cancle-btn img {
+  width: 15px;
+  height: 15px;
+}
+
+.modal-bg {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  background-color: #0000008e;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+/* contact-page end */
