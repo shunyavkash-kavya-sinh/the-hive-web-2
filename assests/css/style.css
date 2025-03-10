@@ -2088,4 +2088,8 @@ select option {
   overflow: hidden;
 }
 
+.green-bg{
+  background-color: var(--primary);
+}
+
 /* contact-page end */
