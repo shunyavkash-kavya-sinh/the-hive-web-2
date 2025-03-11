@@ -2161,7 +2161,7 @@ input[type="password"] {
 /* loging page end */
 
 /* banner content start */
-.banner-content {
+.banner-content-nest{
   padding: 200px 0px;
   text-align: center;
   background-color: var(--secondary);
