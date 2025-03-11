@@ -22,7 +22,7 @@
 
 <body>
     <!-- header start -->
-    <header class="clip-header">
+    <header class="loging-header">
         <div class="top-header">
             <div class="container">
                 <div class="navigation-bar d-flex justify-between align-center ">
@@ -68,7 +68,7 @@
                             <li><a href="our-purpose.html">Our Purpose</a></li>
                             <li><a href="case-studies.html">Case Studies</a></li>
                             <li><a href="resources.html">Resources</a></li>
-                           <li class="hidden-text"><a href="loging.html">Log Into <strong>Your Nest</strong></a></li>
+                            <li class="hidden-text"><a href="loging.html">Log Into <strong>Your Nest</strong></a></li>
                         </ul>
                         <a href="contact.html" class="btn btn-header">Get In Touch</a>
                     </div>
@@ -86,22 +86,28 @@
         <section class="banner-clip green-bg">
             <div class="container">
                 <div class="d-flex banner-tow-columbox align-center">
-                    <div class="loging-box">
-                        <h3>Login To Your Nest</h3>
-                        <span>If you already have and account, please sign in below</span>
-                        <form>
-                            <label for="EMAIL ADDRESS*">EMAIL ADDRESS*</label>
-                            <input type="email">
-                            <label for="EMAIL ADDRESS*">PASSWORD*</label>
-                            <input type="password">
-                          <div class="d-flex">
-                            <a href="javascript:void(0)" class="btn btn-secondary">SIGN ME IN</a>
-                            <a href="javascript:void(0)" class="btn btn-text">Forgot your password? Reset here</a>
-                          </div>
+                    <div class="main-loging-box">
+                        <div class="loging-boder-box">
+                            <h3 class="logingbox-title">Login To <strong>Your Nest</strong></h3>
+                            <span class="logingbox-subtitle">If you already have and account, please sign in below</span>
+                        </div>
+                        <form class="main-loging-inputdata">
+                            <div>
+                                <label for="EMAIL ADDRESS*">EMAIL ADDRESS*</label>
+                                <input type="email" placeholder="EMAIL ADDRE S">
+                            </div>
+                            <div>
+                                <label for="PASSWORD*">PASSWORD*</label>
+                                <input type="password" placeholder="PASSWORD">
+                            </div>
+                            <div class="loging-tow-btn d-flex">
+                                <input type="button" value="SIGN ME IN" class="btn btn-secondary">
+                                <a href="nests.html" class="btn-text">Forgot your password? <strong>Reset here</strong></a>
+                            </div>
                         </form>
                     </div>
                     <div class="resourcesbanner-img">
-                        <img src="assests/images/section/clip-bg-banner.png" alt="clip-bg-banner.png">
+                        <img src="assests/images/section/loging-bg.png" alt="clip-bg-banner.png">
                         <img src="assests/images/section/responsive-bg-banner.png" alt="clip-bg-banner.png">
                     </div>
                 </div>
@@ -110,6 +116,14 @@
         <!-- banner end -->
     </main>
 
+    <!-- jquery link -->
+    <script src="assests/js/jquery.min.js"></script>
+
+    <!-- slick-slider script link -->
+    <script src="assests/js/slick.min.js"></script>
+
+    <!-- main.js link -->
+    <script src="assests/js/main.js"></script>
 </body>
 
 </html>

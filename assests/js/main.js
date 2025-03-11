@@ -175,3 +175,53 @@ $(".modal-toggle").on("click", function (e) {
   }
 });
 
+//  Accrodian
+$(document).ready(function () {
+  $(".accordian").first().addClass("active-in").slideDown();
+  $(".title-acodian").first().find(".frequently-img-box").addClass("rotate");
+
+  $(".title-acodian").click(function () {
+    var accordionContent = $(this).next(".accordian");
+    var imgBox = $(this).find(".frequently-img-box");
+
+    if (accordionContent.hasClass("active-in")) {
+      accordionContent.removeClass("active-in").slideUp();
+      imgBox.removeClass("rotate");
+    } else {
+      $(".accordian").removeClass("active-in").slideUp();
+      $(".frequently-img-box").removeClass("rotate");
+
+      accordionContent.addClass("active-in").slideDown();
+      imgBox.addClass("rotate");
+    }
+  });
+});
+
+// filter dow
+  $(document).ready(function () {
+    $(".download-box").show();
+
+    $(".filter-btn").click(function () {
+      var filter = $(this).data("filter");
+
+      $(".filter-btn").removeClass("active");
+      $(this).addClass("active");
+
+      if (filter === "all") {
+        $(".download-box").fadeIn(); 
+      } else {
+        $(".download-box").hide();
+        $("." + filter).fadeIn();
+      }
+    });
+
+    $(".download-img").click(function () {
+      var fileUrl = $(this).data("file");
+      var a = document.createElement("a");
+      a.href = fileUrl;
+      a.download = fileUrl.split("/").pop();
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  });
