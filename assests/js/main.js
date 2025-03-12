@@ -198,30 +198,50 @@ $(document).ready(function () {
 });
 
 // filter dow
-  $(document).ready(function () {
-    $(".download-box").show();
+$(document).ready(function () {
+  $(".download-box").show();
 
-    $(".filter-btn").click(function () {
-      var filter = $(this).data("filter");
+  $(".filter-btn").click(function () {
+    var filter = $(this).data("filter");
 
-      $(".filter-btn").removeClass("active");
-      $(this).addClass("active");
+    $(".filter-btn").removeClass("active");
+    $(this).addClass("active");
 
-      if (filter === "all") {
-        $(".download-box").fadeIn(); 
-      } else {
-        $(".download-box").hide();
-        $("." + filter).fadeIn();
-      }
-    });
-
-    $(".download-img").click(function () {
-      var fileUrl = $(this).data("file");
-      var a = document.createElement("a");
-      a.href = fileUrl;
-      a.download = fileUrl.split("/").pop();
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
+    if (filter === "all") {
+      $(".download-box").fadeIn();
+    } else {
+      $(".download-box").hide();
+      $("." + filter).fadeIn();
+    }
   });
+
+  $(".download-img").click(function () {
+    var fileUrl = $(this).data("file");
+    var a = document.createElement("a");
+    a.href = fileUrl;
+    a.download = fileUrl.split("/").pop();
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+});
+
+// nest-filter-box
+
+$(document).ready(function () {
+  $(".three-columnvideo-box").show();
+
+  $(".filter-btn-nest").click(function () {
+    var filter = $(this).data("filter");
+
+    $(".filter-btn-nest").removeClass("active-nest");
+    $(this).addClass("active-nest");
+
+    if (filter === "all") {
+      $(".three-columnvideo-box").fadeIn();
+    } else {
+      $(".three-columnvideo-box").hide();
+      $("." + filter).fadeIn();
+    }
+  });
+});
