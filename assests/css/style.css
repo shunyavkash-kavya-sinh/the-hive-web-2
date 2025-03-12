@@ -988,7 +988,7 @@ a:hover .contact-icone {
   position: relative;
   background-image: url(../images/section/purpose-bg-img.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50% 100%;
   background-position: right;
   background-color: var(--skin);
 }
@@ -1254,7 +1254,7 @@ a:hover .contact-icone {
   position: relative;
   background-image: url(../images/section/our-purpose-bghaf.png);
   background-repeat: no-repeat;
-  background-size: contain;
+ background-size: 50% 100%;
   background-position: right;
   background-color: var(--skin);
 }
@@ -1590,7 +1590,7 @@ a:hover .contact-icone {
   position: relative;
   background-image: url(../images/section/res-clip-bg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+ background-size: 50% 100%;
   background-position: right;
   background-color: var(--skin);
 }
@@ -2256,7 +2256,7 @@ input[type="password"] {
   position: relative;
   background-image: url(../images/section/res-clip-bg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+ background-size: 50% 100%;
   background-position: right;
   background-color: var(--skin);
   overflow: hidden;
