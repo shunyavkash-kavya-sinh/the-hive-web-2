@@ -2,10 +2,13 @@
   --primary: #043c39;
   --secondary: #ed6c4f;
   --white: #ffffff;
+  --footer-menu: #bfbfbf;
   --skin: #edede5;
   --black: #000000;
+  --main-color: #bfbfbf;
   --libre-franklin: "Libre Franklin", sans-serif;
 }
+
 
 @media (max-width: 1280px) {
   h1 {
